@@ -41,7 +41,7 @@ const char *Wrapped::_get_extension_class() const {
 }
 
 void Wrapped::_postinitialize() {
-	const char *extension_class = _get_extension_class();
+        const char *extension_class = _get_extension_class();
 	if (extension_class) {
 		godot::internal::gdn_interface->object_set_instance(_owner, extension_class, this);
 	}
